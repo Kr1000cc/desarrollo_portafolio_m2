@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+  <title>Tu Carrito | Ferretería Pellahuén</title>
+</head>
+<body class="d-flex flex-column min-vh-100">
+  <header>
+    <nav class="navbar navbar-expand-lg border-bottom shadow-sm">
+      <div class="container-fluid d-flex flex-wrap align-items-center justify-content-between">
+        <div class="d-flex align-items-center col-6 col-lg-3 order-1">
+          <a href="index.html" class="text-decoration-none text-dark d-flex align-items-center">
+            <h1 class="navbar-brand mb-0 h1">Pellahuén</h1>
+          </a>
+        </div>
+        <div class="d-flex gap-2 justify-content-end col-6 col-lg-3 order-2 order-lg-3">
+          <a href="carrito.html" class="btn btn-primary position-relative">
+            <i class="bi bi-cart"></i>
+            <span id="contador-carrito" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="container py-5 flex-grow-1">
+    <div class="d-flex justify-content-between align-items-center border-bottom pb-2 mb-4">
+      <h2 class="mb-0">Tu Carrito de Pedidos</h2>
+      <a href="index.html" class="btn btn-outline-secondary btn-sm">Seguir Comprando</a>
+    </div>
+    <div class="table-responsive shadow-sm rounded">
+      <table class="table table-hover align-middle mb-0">
+        <thead class="table-light">
+          <tr>
+            <th>Material</th>
+            <th class="text-center">Cantidad</th>
+            <th class="text-end">Subtotal</th>
+            <th class="text-center">Acción</th>
+          </tr>
+        </thead>
+        <tbody id="cuerpo-carrito">
+        </tbody>
+      </table>
+    </div>
+    <div class="text-end mt-4 p-4 bg-light rounded shadow-sm">
+      <h4 class="fw-bold">Total Estimado: <span id="total-carrito" class="text-primary">$0</span></h4>
+      <button class="btn btn-success btn-lg mt-2"><i class="bi bi-credit-card me-2"></i>Proceder al Pago</button>
+    </div>
+  </main>
+  <footer class="bg-dark text-light text-center py-4 mt-auto">
+    <div class="container">
+      <p class="mb-0">© 2026 Sociedad Constructora Pellahuén Ltda. - Venta de Materiales</p>
+    </div>
+  </footer>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/productos.js"></script>
+  <script src="assets/js/carrito.js"></script>
+  <script src="assets/js/vista-carrito.js"></script>
+</body>
+</html>
